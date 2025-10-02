@@ -10,7 +10,7 @@
 // int main()
 // {
 //     int x,hx,gx;
-//     hx = (hhhhhhhx*x) - 16;
+//     hx = (*x) - 16;
 //     gx = (x*x) + 16;
 
 //     printf("INFORME OS NUMEROS:\n");
