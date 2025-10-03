@@ -1,21 +1,31 @@
-// // CALCULAR Y
-// #include <stdio.h>
+// CALCULAR Y
+#include <stdio.h>
 
-// int CalcularY(int fx, int gx)
-// {
+int CalcularY(int fx, int gx)
+{
+    return (fx+gx);
+}
 
-//     return (fx+gx);
-// }
+int main()
+{
+    int x,fx,hx,gx;
+   
+    printf("INFORME x:\n");
+    scanf("%d",&x);
+    hx = (x*x) - 16;
+    
+    if(hx>=0){
+        fx=hx;
+    } else {
+        fx=1;
+    }
 
-// int main()
-// {
-//     int x,hx,gx;
-//     hx = (*x) - 16;
-//     gx = (x*x) + 16;
-
-//     printf("INFORME OS NUMEROS:\n");
-//     scanf("%d%d", &n1, &n2);
-//     printf("A soma multiplicada por 5 e: %.d\n", Soma(n1, n2));
-
-//     return (0);
-// }
+    if(fx==0){
+        gx = (x*x) + 16;
+    }else if(fx>0){
+        gx=0;
+    }
+    
+    printf("\n%d",CalcularY(fx,gx));
+    return (0);
+}

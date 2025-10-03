@@ -1,20 +1,21 @@
 // CALCULO DE AREAS
 #include <stdio.h>
 
+
 float AreaQuadrada(float larg)
 {
     return(larg * larg);
 }
 float AreaCirculo(float raio)
 {
-       return 3.14f * (raio * raio);
+    return 3.14f * (raio * raio);
 }
 
 int main()
 {
     float larg,raio;
 
-    printf("INFORME A LARGURA DO QUADRADO:\n");
+    printf("INFORME O LADO DO QUADRADO:\n");
     scanf("%f", &larg);
     printf("A area do quadrado e de : %.2f e o calculo dessa area e (larg * larg)\n\n", AreaQuadrada(larg));
 

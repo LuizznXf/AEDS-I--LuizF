@@ -5,8 +5,6 @@ float Aumento(float x , float y)
 {
     return(x * (1 + y / 100));
 }
-
-
 int main()
 {
     float x,y;
