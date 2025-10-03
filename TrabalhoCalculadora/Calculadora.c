@@ -28,9 +28,9 @@ float Divisao(float n1, float n2)
     if(x==1){
         return 0;
     }else{
-        printf("%.2f", n1/n2);   
+        return n1/n2;  
     }
-    return 0;
+   
 }
 
 int main()
@@ -57,31 +57,38 @@ int main()
                 break;
             case 2:
                 retorno = Soma(n1, n2);
-                printf("Resultado: %.2f\n", retorno);
                 if(z!=0){
                     printf("Voce nao entrou com nenhum numero ainda!\n");
+                }else{
+                     system("cls");
+                     printf("Resultado: %.2f\n", retorno);              
                 }
                 break;
             case 3:
                 retorno = Subtracao(n1, n2);
-                printf("Resultado: %.2f\n", retorno);
                 if(z!=0){
                     printf("Voce nao entrou com nenhum numero ainda!\n");
+                }else{
+                     system("cls");
+                     printf("Resultado: %.2f\n", retorno);
                 }
                 break;
             case 4:
                 retorno = Multiplicacao(n1, n2);
-                printf("Resultado: %.2f\n", retorno);
                 if(z!=0){
                     printf("Voce nao entrou com nenhum numero ainda!\n");
+                }else{ 
+                    system("cls");
+                    printf("Resultado: %.2f\n", retorno);
                 }
                 break;
             case 5:
                 retorno = Divisao(n1, n2);
-                if (n2 != 0)
-                    printf("Resultado: %.2f\n", retorno);
                     if(z!=0){
                         printf("Voce nao entrou com nenhum numero ainda!\n");
+                    }else if (n2 != 0){
+                    system("cls");
+                    printf("Resultado: %.2f\n", retorno);
                     }
                 break;
             case 6:
