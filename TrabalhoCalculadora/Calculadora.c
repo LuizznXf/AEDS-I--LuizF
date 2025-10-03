@@ -16,6 +16,7 @@ float Multiplicacao(float n1, float n2)
 float verificarDivisao(float n2)
 {
     if (n2 == 0) { 
+        printf("ERR0!Nao e possivel dividir um numero por 0!\n");
         return 1; 
     } else {
         return 0; 
@@ -25,9 +26,9 @@ float Divisao(float n1, float n2)
 {
     float x = verificarDivisao(n2);
     if(x==1){
-        printf("ERR0!Nao é possivel dividir um numero por 0!.\n");
+        return 0;
     }else{
-        return (n1 / n2); 
+        printf("%.2f", n1/n2);   
     }
     return 0;
 }
