@@ -101,7 +101,7 @@ int main() {
             break;
         default:
          if(z==1){
-            printf("Opcao invalida!\n");
+            printf("OPCAO INVALIDA!\n");
          }
         break;
         }
