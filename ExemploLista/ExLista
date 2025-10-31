@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include<confio.h> //usar o gotoxy
+#include<windons.h> //usar o gotoxy
+#define InicioArranjo 1
+#define MaxTam 5
+
+typedef int Apontador;
+
+typedef struct
+{
+    int cod;
+    int idade;
+} TipoItem;
+
+typedef struct
+{
+    TipoItem Item[MaxTam + 1];
+    Apontador Primeiro;
+    Apontador Ultimo;
+} TipoLista;
+
+TipoLista Lista;
+TipoItem x;
+Apontador pos;
+
+int main()
+{
+  
+}
+
+
