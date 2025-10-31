@@ -23,6 +23,16 @@ TipoLista Lista;
 TipoItem x;
 Apontador pos;
 
+void FLVazia(TipoLista *Lista)
+{
+    Lista->Primeiro = InicioArranjo;
+    Lista->Ultimo = Lista->Primeiro;
+}
+int Vazia(TipoLista Lista)
+{
+    return (Lista.Primeiro == Lista.Ultimo);
+}
+
 int main()
 {
    int opcao,resposta;
@@ -32,9 +42,10 @@ int main()
 
         system("cls");
         printf("\n\nMENU\n");
-        printf("Digite a opção desejada:\n ");
+        printf("Digite a opção desejada:\n");
         printf("0 - Sair\n");
         printf("1 - Esvaziar Lista\n");
+        printf("2 - Verificar se a lista esta vazia\n");
         scanf("%d",&opcao);
         switch(opcao)
         {
@@ -45,6 +56,13 @@ int main()
             //FLVazia(&Lista);
                printf("Lista esvaziada com sucesso!\n");
             break;
+            case 2:
+             resposta=Vazia(Lista);
+                if(resposta==1)
+                    printf("A lista esta vazia!\n");
+                else
+                    printf("A lista nao esta vazia!\n");
+                break;
            default:
             printf("Opcao invalida!\n");
         }
