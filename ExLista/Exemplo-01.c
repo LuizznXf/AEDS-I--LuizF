@@ -33,11 +33,34 @@ int Vazia(TipoLista Lista)
     return (Lista.Primeiro == Lista.Ultimo);
 }
 
+void Insere(TipoItem x, TipoLista *Lista)
+{
+    if (Lista->Ultimo == MaxTam + 1)
+    {
+        printf("Erro: Lista cheia\n");
+        return;
+    }
+    else{
+    Lista->Item[Lista->Ultimo] = x;
+    Lista->Ultimo++;
+    }
+}
+
+void Imprime(TipoLista Lista)
+{
+    int aux;
+    for(aux = Lista.Primeiro; aux < Lista.Ultimo; aux++)
+    {
+        printf("Codigo: %d\n", Lista.Item[aux].cod);
+        printf("Idade: %d\n", Lista.Item[aux].idade);
+    }
+}
+
 int main()
 {
    int opcao,resposta;
     setlocale(LC_ALL,"");
-    // FLVazia(&Lista);
+    FLVazia(&Lista);
     do{
 
         system("cls");
@@ -46,6 +69,8 @@ int main()
         printf("0 - Sair\n");
         printf("1 - Esvaziar Lista\n");
         printf("2 - Verificar se a lista esta vazia\n");
+        printf("3 - Inserir elemento na lista\n");
+        printf("4 - Imprimir os elemento da lista\n");
         scanf("%d",&opcao);
         switch(opcao)
         {
@@ -53,7 +78,7 @@ int main()
             printf("Saindo...\n");
            break;
            case 1:
-            //FLVazia(&Lista);
+            FLVazia(&Lista);
                printf("Lista esvaziada com sucesso!\n");
             break;
             case 2:
@@ -63,6 +88,16 @@ int main()
                 else
                     printf("A lista nao esta vazia!\n");
                 break;
+            case 3:
+                printf("Digite o codigo\n");
+                scanf("%d", &x.cod);
+                printf("Digite a idade\n");
+                scanf("%d", &x.idade);
+                Insere(x, &Lista);
+                break;
+            case 4:
+                Imprime(Lista);    
+                break;    
            default:
             printf("Opcao invalida!\n");
         }
