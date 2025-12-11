@@ -11,14 +11,13 @@ typedef struct
     int cod;
     int idade;
 } TipoItem;
-
+    
 typedef struct
 {
     TipoItem Item[MaxTam + 1];
     Apontador Primeiro;
     Apontador Ultimo;
 } TipoLista;
-
 TipoLista Lista;
 TipoItem x;
 Apontador pos;
@@ -69,13 +68,14 @@ void Procura(TipoItem x, TipoLista Lista, Apontador *Pos)
             printf("Elemento encontrado: Codigo na posicao %d\n", i);
             break;
         }
-    }
+    }   
     if (encontrado == 0)
     {
        printf("Elemento nao encontrado na lista\n");
     }
     
 }
+
 
 int main()
 {
@@ -94,6 +94,7 @@ int main()
         printf("3 - Inserir elemento na lista\n");
         printf("4 - Imprimir os elemento da lista\n");
         printf("5 - Pesquisar elemento na lista\n");
+        
         scanf("%d", &opcao);
         switch (opcao)
         {
