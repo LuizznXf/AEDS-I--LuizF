@@ -1,10 +1,8 @@
 
-QUESTÃO 3
+//QUESTÃO 3
 #include <stdio.h>
 #include <stdlib.h>
-
 #define MaxTam 3
-
 
 typedef int Apontador;
 
@@ -18,7 +16,7 @@ typedef struct {
     Apontador Trás;
 } TipoFila;
 
-TipoFila Lista;
+TipoFila Fila;
 TipoItem x;
 int tamanho=0;
 
@@ -35,14 +33,15 @@ int Vazia(TipoFila Fila) {
 
 int main(){
     int opcao , resposta;
-    FFVazia(&Lista);
+    FFVazia(&Fila);
 
     do{
 
         printf("\n\nMENU\n\n");
         printf("Digite a opção desejada!!!!");
-        printf("\n0 - Sair");
-        printf("\n1 - Esvaziar Fila");
+        printf("0 - Sair\n");
+        printf("1 - Esvaziar Fila\n");
+        printf("2 - Verfificar se a fila esta vazia\n");
      
         switch (opcao)
         {
@@ -53,11 +52,18 @@ int main(){
         }
         case 1:
         {
-            FFVazia(&fila);
+            FFVazia(&Fila);
             printf("\nA FILA VAZIA\n");
         break;
         }
-
+        case 2:
+        {
+            if (Vazia(Fila)==1){
+                printf("\nA FILA ESTA VAZIA\n");
+            } else {
+                printf("\nA FILA NAO ESTA VAZIA\n");
+            }
+        }
         default: printf("\n\nOPCAO INVALIDA\n\n");
         }
         _getch();
