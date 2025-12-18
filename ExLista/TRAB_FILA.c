@@ -22,7 +22,6 @@ typedef struct
 TipoFila Fila;
 int tamanho = 0;
 
-/* Inicializa a fila */
 void FFVazia(TipoFila *Fila)
 {
     Fila->Frente = 1;
@@ -30,13 +29,11 @@ void FFVazia(TipoFila *Fila)
     tamanho = 0;
 }
 
-/* Verifica se a fila está vazia */
 int Vazia(TipoFila Fila)
 {
     return (tamanho == 0);
 }
 
-/* Enfileira um elemento */
 void Enfileira(TipoItem x, TipoFila *Fila)
 {
     if (tamanho == MaxTam)
@@ -50,7 +47,6 @@ void Enfileira(TipoItem x, TipoFila *Fila)
     tamanho++;
 }
 
-/* Imprime a fila */
 void Imprime(TipoFila Fila)
 {
     int i, aux;
@@ -75,7 +71,6 @@ void Imprime(TipoFila Fila)
     }
 }
 
-/* Procura um elemento pelo código */
 void ProcuraCodigo(TipoFila Fila, int codigo)
 {
     int i, aux;
@@ -107,7 +102,6 @@ void ProcuraCodigo(TipoFila Fila, int codigo)
     printf("\nCodigo nao encontrado na fila.\n");
 }
 
-/* Desenfileira (versão alternativa) */
 TipoItem Desenfileira(TipoFila *Fila)
 {
     TipoItem removido;
@@ -127,13 +121,11 @@ TipoItem Desenfileira(TipoFila *Fila)
     return removido;
 }
 
-/* Retorna o tamanho da fila */
 int TamanhoFila()
 {
     return tamanho;
 }
 
-/* Programa principal */
 int main()
 {
     int opcao, codigo;
@@ -145,7 +137,7 @@ int main()
     {
         printf("\nMENU\n");
         printf("1 - Enfileirar\n");
-        printf("2 - Imprimir fila\n");
+        printf("2 - Imprimir a Fila\n");
         printf("3 - Procurar por codigo\n");
         printf("4 - Desenfileirar\n");
         printf("5 - Tamanho da fila\n");
