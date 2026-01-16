@@ -29,19 +29,19 @@ void Enfileira(Fila *f, Moto m) {
 
 int main() {
     Fila fila;
-    Moto m;
+    Moto M;
     int i;
 
     InicializaFila(&fila);
 
     for (i = 0; i < MaxTam; i++) {
         printf("\nDigite o modelo da moto %d: ", i + 1);
-        scanf("%d", &m.modelo);
+        scanf("%d", &M.modelo);
 
         printf("Digite o consumo (km por litro): ");
-        scanf("%f", &m.consumo);
+        scanf("%f", &M.consumo);
 
-        Enfileira(&fila, m);
+        Enfileira(&fila, M);
     }
 
     int MaisEconomica = fila.Frente;
